@@ -1,0 +1,134 @@
+@import url('https://fonts.google.com/specimen/Barlow');
+
+body{
+    font-family: 'Barlow',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+header{
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+header img{
+    position: relative;
+    left: 5%;
+    margin-right: 70%;
+}
+
+#menuDiv{
+    display: inline-grid;
+    position: absolute;
+    top: 5em;
+    left: 1.5em;
+    width: 85%;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.459);
+    padding: 5% 0;
+}
+#menuDiv a{
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#menuDiv div hr{
+    animation: aumento 2.5s forwards;
+    width: 15em;
+}
+
+@keyframes aumento{
+    from{
+        width: 0em;
+        color: red;
+    }
+
+    to{
+        width: 15em;
+    }
+}
+
+#menuDiv a #log{
+    color: hsl(231, 7%, 65%);
+}
+
+header label input{
+    display: none;
+}
+
+header label img{
+    width: 10%;
+    margin: 0;
+}
+
+.col-left{
+    background-image: url('../images/illustration-devices.svg');
+    background-repeat: no-repeat;    
+    background-size: 140%;
+}
+
+.col-left img{
+    width: 141%;
+}
+.col-right h3{
+    color: hsl(231, 7%, 65%);
+    position: relative;
+    left: 2em;
+    font-size: .8em;
+}
+
+h3 span{
+    color: white;
+    font-weight: 700;
+    background-color: hsl(230, 29%, 20%);
+    margin-right: 5px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.col-right{
+    margin-top: 5em;
+}
+
+.col-right div h1{
+    position: relative;
+    left: 1em;
+    color: hsl(230, 29%, 20%);
+    font-size: 1.5em;    
+    font-weight: bolder;
+}
+.col-right div p{
+    position: relative;
+    width: 75vw;
+    left: 1.5em;
+    color: hsl(237, 8%, 45%);
+}
+
+#buttons{
+    display: inline-flex;
+    position: relative;
+    left: 1.5em;
+}
+
+#buttons input{
+    border: none;
+    font-weight: 700;
+    color: white;
+    background-color: hsl(0, 100%, 68%);
+    height:3em;
+    width: 11em;
+    border-radius: 5px;
+    margin: 0;
+    cursor: pointer;
+}
+
+#buttons p{
+    font-size: .7em;
+    position: relative;
+    top: 1em;
+    margin:0;
+}
