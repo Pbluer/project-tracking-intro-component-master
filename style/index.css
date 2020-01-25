@@ -1,9 +1,22 @@
 @import url('https://fonts.google.com/specimen/Barlow');
 
 body{
+    display: flex;
     font-family: 'Barlow',sans-serif;
     font-weight: 400;
     font-size: 18px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.bgGrey{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height:60%;
+    border-bottom-left-radius: 15%;
+    background-color: #EEF3F6;
+    z-index: -1;
 }
 
 header{
@@ -14,20 +27,21 @@ header{
 header img{
     position: relative;
     left: 5%;
-    margin-right: 70%;
+    margin-right: 60%;
 }
 
 #menuDiv{
     display: none;
     position: absolute;
     top: 5em;
-    left: 1.5em;
+    left: 2em;
     width: 85%;
     background-color: white;
     border-radius: 2px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.459);
     padding: 5% 0;
 }
+
 #menuDiv a{
     text-align: center;
     color: black;
@@ -37,7 +51,7 @@ header img{
 }
 
 #menuDiv div hr{
-    animation: aumento 2.5s;
+    animation: grow 2.5s;
     width: 15em;
 }
 
@@ -45,14 +59,15 @@ header img{
     display: none;
 }
 
-@keyframes aumento{
-    from{        
+@keyframes grow{
+    from{
         width: 0em;
-        color: red;
+        color: hsl(0, 100%, 68%);
     }
 
     to{
         width: 15em;
+        color: black;
     }
 }
 
@@ -61,21 +76,15 @@ header img{
     display: inline-grid;
 }
 
-
 header label img{
     width: 10%;
     margin: 0;
 }
 
-.col-left{
-    background-image: url('../images/illustration-devices.svg');
-    background-repeat: no-repeat;    
-    background-size: 140%;
+.col-left img{
+    width: 141%;    
 }
 
-.col-left img{
-    width: 141%;
-}
 .col-right h3{
     color: hsl(231, 7%, 65%);
     position: relative;
@@ -98,11 +107,13 @@ h3 span{
 
 .col-right div h1{
     position: relative;
+    width: 11em;
     left: 1em;
     color: hsl(230, 29%, 20%);
     font-size: 1.5em;    
     font-weight: bolder;
 }
+
 .col-right div p{
     position: relative;
     width: 75vw;
@@ -133,4 +144,96 @@ h3 span{
     position: relative;
     top: 1em;
     margin:0;
+}
+
+@media (min-width:1024px){
+
+    body{
+        overflow: hidden;
+        -webkit-overflow-scrolling: initial;
+    }
+
+    .bgGrey{
+        height: 60%;
+    }
+
+    .contaier{
+        width: 100%;        
+    }
+
+    header img{
+        top: 10;
+        bottom: 0px;
+        margin: 0;
+    }
+
+    header label{
+        display: none;
+    }
+
+    #menuDiv{
+        display: inline-flex;
+        position: relative;
+        top: 0;
+        left:50%;
+        box-shadow: none;
+        background-color: initial;
+        padding: 0;
+    
+    }
+
+    #menuDiv div hr {
+       animation: growDesk 2s forwards;
+    }
+
+    @keyframes growDesk {
+        from{
+            width: 0;
+            color: hsl(0, 100%, 68%);
+        }
+        to{
+            width: 21.5em;
+        }
+    }
+
+    #menuDiv div{
+        position: absolute;
+        top: 30px;        
+    }
+
+    #menuDiv a{
+        cursor: pointer;
+    }
+
+    .col-left img{
+        position: relative;        
+        left: 56%;
+        width: 60%;
+    }
+
+    .col-right{
+        position: relative;
+        top: auto;
+        bottom: 45%;
+        left: 5em;
+        margin: 0 ;
+    }
+
+    .col-right div h1{
+        width: 11em;
+    }
+
+    .col-right div p{
+        width: 16em;
+    }
+}
+
+@media (min-width:1440px){
+    
+    
+    .col-left img {
+        position: relative;
+        left: 56%;
+        width: 82%;
+    }
 }
