@@ -18,7 +18,7 @@ header img{
 }
 
 #menuDiv{
-    display: inline-grid;
+    display: none;
     position: absolute;
     top: 5em;
     left: 1.5em;
@@ -37,12 +37,16 @@ header img{
 }
 
 #menuDiv div hr{
-    animation: aumento 2.5s forwards;
+    animation: aumento 2.5s;
     width: 15em;
 }
 
+#menuChech{
+    display: none;
+}
+
 @keyframes aumento{
-    from{
+    from{        
         width: 0em;
         color: red;
     }
@@ -52,13 +56,11 @@ header img{
     }
 }
 
-#menuDiv a #log{
-    color: hsl(231, 7%, 65%);
+#menuChech:checked ~ #menuDiv{
+    transition: 1s;
+    display: inline-grid;
 }
 
-header label input{
-    display: none;
-}
 
 header label img{
     width: 10%;
